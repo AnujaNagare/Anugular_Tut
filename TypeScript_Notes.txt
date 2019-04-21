@@ -1,0 +1,15 @@
+TypeScript :
+
+- superset of java script
+	- valid java script code is a valid type script code
+
+Additional features of Type Script
+- Strong Typing : variable type is specified
+- object oriented features like: classes, interfaces, structures, access modifiers, public and private, fields, etc. 
+- compile-time errors : can catch errors at compile time 
+- great tooling  
+
+
+TypeScript ---transpile---> Javascript
+
+

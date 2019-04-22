@@ -68,3 +68,67 @@ let dolog = (message) =>  console.log(message);
 // shorter way of defining a function : lambda expression
 
 dolog("Lambda Expression");
+
+
+// Section 2: Lect 18 : Interfaces (signature of a function)
+
+interface Point{ //first letter should be capital
+    x: number, 
+    y:number
+}
+let drawPoint = (point: Point ) => {
+
+} 
+
+// drawPoint({
+//     x:1,
+//     y:2
+// })
+
+// Section 2: Lect 19 : Classes
+
+// Class : Groups variables (properties) an dfunctions (methods) that are highly related.
+
+class Point{ //first letter should be capital
+    x: number;
+    y:number;
+   
+    constructor(x?: number, y?:number){ //when the 1st parameter is made optional by adding?, all other parameters should also be optional
+        this.x=x;
+        this.y=y;
+    }//Constructors // Section 2: Lect 21 : Constructors
+
+    draw () {
+        console.log('X: ' +this.x + '\nY: '+ this.y);
+    }
+    getDistance = (another: Point) =>{
+        // 
+    }
+}
+
+// Section 2: Lect 20 : Objects (instance of a class)
+// let point = new Point(); //is possible when parameters are made optional
+// point.x=1;
+// point.y=2;
+// point.draw();
+
+// Section 2: Lect 21 : Constructors
+let point = new Point(4,5);
+point.draw();
+
+// Section 2: Lect 22 : Access Modifier (can be applied to the member of a class to control its access from the outside)
+point.x=3;
+point.draw();
+
+// Access Modifiers : public(default), private, protected 
+
+// Section 2: Lect 23 : Access Modifier in Constructor Parameters
+// class Point{ //first letter should be capital   
+//     constructor(private x?: number, private y?:number){ //when the 1st parameter is made optional by adding?, all other parameters should also be optional
+//     }//Constructors 
+//     draw () {
+//         console.log('X: ' +this.x + '\nY: '+ this.y);
+//     }
+// }
+
+

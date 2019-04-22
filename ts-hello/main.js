@@ -56,3 +56,32 @@ var log1 = function (message) {
 var dolog = function (message) { return console.log(message); };
 // shorter way of defining a function : lambda expression
 dolog("Lambda Expression");
+var drawPoint = function (point) {
+};
+// drawPoint({
+//     x:1,
+//     y:2
+// })
+// Section 2: Lect 19 : Classes
+// Class : Groups variables (properties) an dfunctions (methods) that are highly related.
+var Point = /** @class */ (function () {
+    function Point(x, y) {
+        this.getDistance = function (another) {
+            // 
+        };
+        this.x = x;
+        this.y = y;
+    } //Constructors // Section 2: Lect 21 : Constructors
+    Point.prototype.draw = function () {
+        console.log('X: ' + this.x + '\nY: ' + this.y);
+    };
+    return Point;
+}());
+// Section 2: Lect 20 : Objects (instance of a class)
+// let point = new Point(); //is possible when parameters are made optional
+// point.x=1;
+// point.y=2;
+// point.draw();
+// Section 2: Lect 21 : Constructors
+var point = new Point(4, 5);
+point.draw();

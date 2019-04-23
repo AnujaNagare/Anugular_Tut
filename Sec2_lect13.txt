@@ -1,0 +1,11 @@
+To installe typescript: npm install -g typescript
+- g stands for global
+
+To check if type script compiler installed correctly : tsc --version
+
+Create basic hello world
+
+- create main.ts file with typescript
+- compile with:  tsc main.ts (this creates .js file)
+- run: npm main.js
+

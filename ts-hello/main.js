@@ -1,4 +1,6 @@
+"use strict";
 // section 2 : lect 13
+exports.__esModule = true;
 function log(message) {
     console.log(message);
 }
@@ -56,32 +58,66 @@ var log1 = function (message) {
 var dolog = function (message) { return console.log(message); };
 // shorter way of defining a function : lambda expression
 dolog("Lambda Expression");
-var drawPoint = function (point) {
-};
+// Section 2: Lect 18 : Interfaces (signature of a function)
+// interface Point{ //first letter should be capital
+//     x: number, 
+//     y:number
+// }
+// let drawPoint = (point: Point ) => {
+// } 
 // drawPoint({
 //     x:1,
 //     y:2
 // })
 // Section 2: Lect 19 : Classes
 // Class : Groups variables (properties) an dfunctions (methods) that are highly related.
-var Point = /** @class */ (function () {
-    function Point(x, y) {
-        this.getDistance = function (another) {
-            // 
-        };
-        this.x = x;
-        this.y = y;
-    } //Constructors // Section 2: Lect 21 : Constructors
-    Point.prototype.draw = function () {
-        console.log('X: ' + this.x + '\nY: ' + this.y);
-    };
-    return Point;
-}());
+// class Point{ //first letter should be capital
+//     // x: number;
+//     // y:number;
+//     constructor(private _x?: number, private _y?:number){ //when the 1st parameter is made optional by adding?, all other parameters should also be optional
+//         // this.x=x;
+//         // this.y=y;
+//     }//Constructors // Section 2: Lect 21 : Constructors
+//     draw () {
+//         console.log('X: ' +this._x + '\nY: '+ this._y);
+//     }
+//     get x(){
+//         return this._x;
+//     }
+//     set x(value){
+//         if (value < 0)
+//             throw new Error('value cannot be less than 0.');    
+//         this._x = value;
+//         }
+//     getDistance = (another: Point) =>{
+//         // 
+//     }
+// }
 // Section 2: Lect 20 : Objects (instance of a class)
 // let point = new Point(); //is possible when parameters are made optional
 // point.x=1;
 // point.y=2;
 // point.draw();
 // Section 2: Lect 21 : Constructors
-var point = new Point(4, 5);
+// let point = new Point(4,5);
+// point.draw();
+// Section 2: Lect 22 : Access Modifier (can be applied to the member of a class to control its access from the outside)
+// point.x=3;
+// point.draw();
+// Access Modifiers : public(default), private, protected 
+// Section 2: Lect 23 : Access Modifier in Constructor Parameters
+// class Point{ //first letter should be capital   
+//     constructor(private x?: number, private y?:number){ //when the 1st parameter is made optional by adding?, all other parameters should also be optional
+//     }//Constructors 
+//     draw () {
+//         console.log('X: ' +this.x + '\nY: '+ this.y);
+//     }
+// }
+// Section 2 : Lect 24 : Properties (like a method in a class)
+// let x = point.x;
+// point.x = 10;
+// point.draw();
+// Section 2 : Lect 25 : Module
+var point_1 = require("./point");
+var point = new point_1.Point(1, 2);
 point.draw();

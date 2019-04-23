@@ -72,13 +72,13 @@ dolog("Lambda Expression");
 
 // Section 2: Lect 18 : Interfaces (signature of a function)
 
-interface Point{ //first letter should be capital
-    x: number, 
-    y:number
-}
-let drawPoint = (point: Point ) => {
+// interface Point{ //first letter should be capital
+//     x: number, 
+//     y:number
+// }
+// let drawPoint = (point: Point ) => {
 
-} 
+// } 
 
 // drawPoint({
 //     x:1,
@@ -89,22 +89,33 @@ let drawPoint = (point: Point ) => {
 
 // Class : Groups variables (properties) an dfunctions (methods) that are highly related.
 
-class Point{ //first letter should be capital
-    x: number;
-    y:number;
+// class Point{ //first letter should be capital
+//     // x: number;
+//     // y:number;
    
-    constructor(x?: number, y?:number){ //when the 1st parameter is made optional by adding?, all other parameters should also be optional
-        this.x=x;
-        this.y=y;
-    }//Constructors // Section 2: Lect 21 : Constructors
+//     constructor(private _x?: number, private _y?:number){ //when the 1st parameter is made optional by adding?, all other parameters should also be optional
+//         // this.x=x;
+//         // this.y=y;
+//     }//Constructors // Section 2: Lect 21 : Constructors
 
-    draw () {
-        console.log('X: ' +this.x + '\nY: '+ this.y);
-    }
-    getDistance = (another: Point) =>{
-        // 
-    }
-}
+//     draw () {
+//         console.log('X: ' +this._x + '\nY: '+ this._y);
+//     }
+//     get x(){
+//         return this._x;
+//     }
+//     set x(value){
+//         if (value < 0)
+//             throw new Error('value cannot be less than 0.');    
+        
+//         this._x = value;
+//         }
+    
+    
+//     getDistance = (another: Point) =>{
+//         // 
+//     }
+// }
 
 // Section 2: Lect 20 : Objects (instance of a class)
 // let point = new Point(); //is possible when parameters are made optional
@@ -113,12 +124,12 @@ class Point{ //first letter should be capital
 // point.draw();
 
 // Section 2: Lect 21 : Constructors
-let point = new Point(4,5);
-point.draw();
+// let point = new Point(4,5);
+// point.draw();
 
 // Section 2: Lect 22 : Access Modifier (can be applied to the member of a class to control its access from the outside)
-point.x=3;
-point.draw();
+// point.x=3;
+// point.draw();
 
 // Access Modifiers : public(default), private, protected 
 
@@ -132,3 +143,12 @@ point.draw();
 // }
 
 
+// Section 2 : Lect 24 : Properties (like a method in a class)
+// let x = point.x;
+// point.x = 10;
+// point.draw();
+
+// Section 2 : Lect 25 : Module
+import { Point} from './point';
+let point  = new Point(1,2);
+point.draw( );
